@@ -48,21 +48,22 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit-icons.min.js"></script>
 <script>
+    // Important Note: Dice Images must be downloaded from somewhere and your image name and source address should be modified here 😏
     // Generating a Random number from 1 to 6
     randomnumber = Math.floor(Math.random() * 6) + 1 ;
     // Random Image
-    randomimage = "dice-" + randomnumber + ".png";
+    randomimage = "dice-" + randomnumber + ".png"; // Your file name format should be written here
     // Source Address of Image URL
-    source = "/Learn_Website/diceimages/" + randomimage;
+    source = "/Learn_Website/diceimages/" + randomimage; // Needs your source address
     // Setting source address to html element
     var image1 = document.querySelectorAll('img')[0];
     image1.setAttribute('src',source);
     // Generating a Random number from 1 to 6
     randomnumber1 = Math.floor(Math.random() * 6) + 1 ;
     // Random Image
-    randomimage1 = "dice-" + randomnumber1 + ".png";
+    randomimage1 = "dice-" + randomnumber1 + ".png"; // Your file name format should be written here
     // Source Address of Image URL
-    source = "/Learn_Website/diceimages/" + randomimage1;
+    source = "/Learn_Website/diceimages/" + randomimage1; // Needs your source address
     var image2 = document.querySelectorAll('img')[1];
     image2.setAttribute('src',source);
 
