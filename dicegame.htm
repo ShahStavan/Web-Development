@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/css/uikit.min.css" />
+    <style>
+        h1{
+            font-size: 3rem;
+        }
+        .uk-flex{
+            width: 50vw;
+            margin: 0 auto;
+        }
+        
+        h4{
+            line-height: 4rem;
+            color: white;
+            letter-spacing: 3.5px;
+        }
+        h3{
+            color: rgb(202, 202, 202);
+            letter-spacing: 5px;
+            font-size: 1.8rem;
+        }
+    </style>
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <h1 class="uk-heading-divider uk-text-center uk-text-primary uk-text-uppercase uk-text-bolder">Refresh Me</h1>
+    <div class="uk-flex">
+        <div class="uk-align-left">
+            <h4 class="uk-text-center uk-text-bold uk-background-secondary uk-text-uppercase">Player 1</h4>
+            <img src="" alt="" width="500" height="500">
+        </div>
+        <div class="uk-align-right">
+            <h4 class="uk-text-center uk-text-bold uk-background-secondary uk-text-uppercase">Player 2</h4>
+            <img src="" alt="" width="500" height="500">
+        </div>
+    </div>
+    <h3 id="wins"></h3>
+    <h6 class="uk-text-center uk-text-muted uk-text-bold" style="margin-top: -5px;">SPECIAL THANKS TO ANGELA YU 😍 AND MADE WITH ❤️ UI KIT</h6>
+    <!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.3/dist/js/uikit-icons.min.js"></script>
+<script>
+    // Generating a Random number from 1 to 6
+    randomnumber = Math.floor(Math.random() * 6) + 1 ;
+    // Random Image
+    randomimage = "dice-" + randomnumber + ".png";
+    // Source Address of Image URL
+    source = "/Learn_Website/diceimages/" + randomimage;
+    // Setting source address to html element
+    var image1 = document.querySelectorAll('img')[0];
+    image1.setAttribute('src',source);
+    // Generating a Random number from 1 to 6
+    randomnumber1 = Math.floor(Math.random() * 6) + 1 ;
+    // Random Image
+    randomimage1 = "dice-" + randomnumber1 + ".png";
+    // Source Address of Image URL
+    source = "/Learn_Website/diceimages/" + randomimage1;
+    var image2 = document.querySelectorAll('img')[1];
+    image2.setAttribute('src',source);
+
+    if(randomnumber>randomnumber1){
+        var text = "Player 1 wins 🥳";
+        var h3 = document.getElementById('wins');
+        h3.setAttribute('class',"uk-text-center uk-text-bold uk-background-secondary uk-text-uppercase")
+        h3.textContent = text;
+    }
+    else if(randomnumber==randomnumber1){
+        var text = "Tie between both Players 😐";
+        h3 = document.getElementById('wins');
+        h3.setAttribute('class',"uk-text-center uk-text-bold uk-background-secondary uk-text-uppercase")
+        h3.textContent = text;
+    }
+    else{
+        var text = "Player 2 wins 🥳";
+        h3 = document.getElementById('wins');
+        h3.setAttribute('class',"uk-text-center uk-text-bold uk-background-secondary uk-text-uppercase")
+        h3.textContent = text;
+    }
+
+</script>
+</body>
+</html>
